@@ -1,11 +1,6 @@
 /* dex hack styles */
 
 	
-	body
-	{
-		padding-top:70px;	
-	}
-	
 	.navbar-brand
 	{
 		/*navbar DEFAULT CSS */
@@ -49,7 +44,26 @@
 	}
 
 
+	.pancake
+	{
+		padding: 9px 10px;
+		background-color: #60B3D8;
+		background-image: none;
+		border: 1px solid transparent;
+		border-radius: 4px;
+		height:31px;
+		width:31px;
+	}
 	
+	.pancake .icon-bar
+	{
+		background-color:#fff;
+		display: block;
+		width: 22px;
+		height: 2px;
+		border-radius: 1px;	
+		margin-top: 4px;
+	}	
 
 
 
@@ -80,6 +94,12 @@
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
+	
+		body
+		{
+			padding-top:70px;	
+		}
+		
 	
 		/* DROPDOWN MENUS COLUMNS  */
 		
