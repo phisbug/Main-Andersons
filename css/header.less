@@ -1,0 +1,220 @@
+/***** start:File: header *********/
+@import "vars";
+@import "mixins";
+
+
+/*change color of caret*/
+header .caret {
+border-top-color: @blue-dark;
+border-right-color: 4px solid @blue-dark;
+border-left-color: 4px solid @blue-dark;    
+}
+
+/*styling the navbar*/
+header .navbar-default {
+   background-color: white;
+}
+header .navbar-default .navbar-nav>li>a {
+text-transform:uppercase;
+font-size:12px;
+letter-spacing: 1px;    
+padding-bottom: 23px;
+}
+header .navbar-default .navbar-nav>li>a:hover {
+    color:@blue-dark;
+    font-weight: bold;
+}
+
+header .navbar-default .navbar-nav>.open>a:focus {
+    color:@blue-dark;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+/*remove round courners in drop down*/
+header .dropdown-menu {
+    padding: 0;
+    border-radius: 0px;
+   
+}
+
+
+header .navbar-nav>li>.dropdown-menu {
+   /*margin-top: 10px;*/
+}
+
+header hr{
+    margin:0;
+    padding:0;
+}
+
+header .navbar {
+    margin-bottom: 10px;
+    border: 0px;
+}
+
+header nav{
+background-color: green;
+}
+
+#menu-extras {
+ 
+ 
+   .box-shadow(0px 5px 8px rgba(0, 0, 0, 0.25));     
+    div:first-child {
+       padding: 6px 21px 6px 10px;
+    }
+     
+    span {
+       font-size: 12px;
+       font-weight: bold;
+    }   
+}
+
+#page-breadcrumbs-container {
+    z-index: 1;
+}
+#caption, #contact-search {
+   display: inline;
+}
+.main-search {
+    width: 157px;
+    display: inline;
+    input {
+    height: 22px;  
+    }        
+}
+
+#caption {
+    font-size: 12px;
+    color: @gray-dark;
+    p{
+        font-size: 12px;
+    }
+}
+
+#main-menu {
+   margin-bottom:0px;
+}
+
+#main-menu-items ul{
+   margin-top: 15px;    
+}
+
+.emphasis {
+    color:@blue-light;
+   
+}
+
+.header-icon {
+          height: 17px;
+          width: 17px;
+          margin: 0 5px;
+      }
+
+.main-menu-container{
+    magin-bottom:50px;
+}
+
+#main-content{
+min-height: 500px;
+}
+
+
+/* style lists for the navigation use the */
+.header-nav-lists {
+    border: 1px solid @blue-light;
+    width: 230px;
+    div {
+        height:36px;
+        background-color: white;
+        
+        a{
+            padding-left: 15px;
+            text-align: left;
+            color: #616060;
+            font-size: 12px;
+            line-height: 3;
+            &:hover{
+                text-decoration: none;
+            }  
+         }
+        &:hover {
+            background-color:@blue-dark;
+            a {
+                color:white;
+            }
+        }
+    }
+}
+
+
+/** ways to travel **/
+.ways-to-travel-submenu {
+    /*width:152px;*/
+    display:inline;
+    float:left;
+      
+}
+
+.ways-to-travel-submenu > p {
+   color: #3C6A98;
+ 
+  font-weight: bold;
+   padding: 10px;
+ }
+
+    .ways-to-travel-submenu > a > div {
+     width:162px;
+     height:36px;
+    
+     background-color: white;  
+     vertical-align: middle;    
+     color: #616060;
+     font-size: 12px;  
+     margin-bottom:5px;
+     box-sizing: border-box;
+    
+    text-align: left;
+    color: #616060;
+    font-size: 12px;
+    padding:2px;
+      word-wrap: break-word;
+     display:table-cell; 
+     vertical-align:middle;
+   padding-left: 10px;
+}     
+
+.ways-to-travel-submenu > a > div:hover  {
+   background-color: #3C6A98;
+   color:white;
+}       
+  #all-menu {
+        float:right;
+        
+        
+        } 
+
+
+.wide-menu {
+  width: 630px; 
+  margin-right:500px;
+  padding:10px;
+  margin-left:-144px;
+}
+
+#destination-wide-menu {
+    width:650px;
+    margin-right:500px;
+    margin-left:-144px;
+}
+
+.header-nav-lists p {
+margin-left: 15px;
+}
+
+#search-dropdown {
+background-color:#60B3D8;
+padding:7px 12px;
+}
+/***** end:File: header *********/

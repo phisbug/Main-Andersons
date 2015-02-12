@@ -1,0 +1,59 @@
+/***** start:File: sidebar-train-of-the-week *********/
+@import "vars";
+@import "mixins";
+
+.train-container {
+background-color:@blue-light;
+height:259px;
+min-width:246px;
+.border-radius(10px, 10px, 10px, 10px);
+background-size: cover; 
+background-repeat:no-repeat;
+position:relative;
+
+}
+
+
+.train-main-text-container {
+  background-color:@blue-light;
+  width:100%;
+  height:55px;
+  position:absolute;
+  bottom:10px;
+}
+
+.train-text-container {
+ background-color:@blue-dark;
+ color:white;
+ width:95%;
+ float:right;
+ height:100%;
+ padding:7px;
+    
+}
+
+.train-text-container  p:first-child{
+	color:white;
+	width:172px;
+	text-transform:uppercase;
+	display:inline;
+	font-size: 12px;
+}
+
+.train-text-container  p span{
+	line-height: 1.4;
+	font-size: 18px;
+	color: #FFFFFF;
+    font-family: Lucida Sans, Lucida Grande, Lucida Sans Unicode, sans-serif;
+	font-weight: bold;
+}
+
+.train-click-link {
+ color:white;
+ text-transform:uppercase;
+ display:inline;
+ float:right;
+ font-size:9px;
+ margin-top: 8px;
+}
+/***** end:File: sidebar-train-of-the-week *********/

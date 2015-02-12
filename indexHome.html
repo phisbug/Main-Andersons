@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Anderson Vacations</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">   
+   
+    <!-- <link rel="stylesheet/less" href="less/style.less">  -->
+    <link rel="stylesheet" href="css/core.css">
+    <link rel="stylesheet" href="css/reusables.css">
+    <link rel="stylesheet" href="css/page-specific.css">
+    
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.4.0/slick.css"/>
+    
+   
+   	<style>
+    	/* Sticky footer styles
+		-------------------------------------------------- */
+		html {
+		  position: relative;
+		  min-height: 100%;
+		}
+		
+		body {
+		  /* Margin bottom by footer height */
+		  
+		  padding-top:528px;
+		}
+		
+		.slider-size
+		{
+			height:420px;	
+		}
+		
+		.row.no-pad 
+		{
+			  margin-right:0;
+			  margin-left:0;
+		}
+		.row.no-pad > [class*='col-'] 
+		{
+			  padding-right:0;
+			  padding-left:0;
+		}
+		
+		
+		.carousel-indicators 
+		{
+			bottom: 0px;
+			margin-bottom: 2px;
+		}
+		
+		.carousel-indicators .active
+		{
+	
+			background-color:#3C6A98;
+			border:1px solid #3C6A98;
+		}
+		
+		.carousel-indicators li
+		{
+			background-color:#fff;	
+		}
+		
+		
+		
+		/* PAGE SPECIFICS */
+		
+		.waysToHeader
+		{
+			font-size:20px;
+			color: #3C6A98;	
+			font-weight:bold;
+			margin-bottom:18px;
+		}
+		
+		#destination-row > div
+		{
+			margin-bottom:19px;
+			position:relative;	
+		}
+		
+		.ourdes
+		{
+			max-width:279px;
+			height:59px;
+			box-sizing:border-box;		
+		}
+		
+		.ourdes.dCapsule:hover
+		{
+			background-color:#60B3D8;	
+		}
+		
+		.ourdes h3
+		{
+			font-size:16px;
+			margin:0;
+		}
+		
+		.wtt
+		{
+			max-width:677px;
+			height:183px;	
+		}
+		
+		.dCapsule
+		{
+			
+			box-sizing:border-box;
+			background-color: #E7E7E7;
+			-moz-border-radius: 10px;
+			-webkit-border-radius: 10px;
+			-khtml-border-radius: 10px;
+			border-radius: 10px;
+				
+		}
+		
+		.dCapsuleBorder
+		{
+			border-left:25px;
+			border-right:25px;
+			border-color:#ADADAD;
+			border-style: solid;
+			border-top:none;
+			border-bottom:none;	
+			position:relative;
+			padding:18px 0px 0px 20px;	
+		}
+		
+		.dCapsuleBorder p 
+		{
+			line-height: 1.1;
+			font-size: 14px;
+			color: #4D4D4D;
+			text-align: center;
+			font-family: Lucida Sans, Lucida Grande, Lucida Sans Unicode, sans-serif;
+			font-weight: bold;
+			width: 133px;
+			margin-top:9px;	
+		}
+		
+		.arrow_left
+		{
+			background:url(img/arrow-blue.png) no-repeat;
+			-webkit-transform: rotate(90deg);
+			-moz-transform: rotate(90deg);
+			-ms-transform: rotate(90deg);
+			-o-transform: rotate(90deg);
+			transform: rotate(90deg);
+			width:23px;
+			height:10px;
+			display:inline-block;
+			position:absolute;
+			left:-24px;
+			top:45%;
+			background-size:contain;
+			cursor:pointer;
+		}
+		.arrow_right
+		{
+			background:url(img/arrow-blue.png) no-repeat;
+			-webkit-transform: rotate(90deg);
+			-moz-transform: rotate(-90deg);
+			-ms-transform: rotate(-90deg);
+			-o-transform: rotate(-90deg);
+			transform: rotate(-90deg);
+			width:23px;
+			height:10px;
+			display:inline-block;
+			position:absolute;
+			right:-24px;
+			top:45%;
+			background-size:contain;
+			cursor:pointer;
+		}
+		
+		
+		
+    </style>
+   
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>   
+    <!-- less -->
+  
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+
+
+<body>
+
+	<!-- header content holder
+    	====================================================== -->  
+  		<header>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div id="main-menu-container">
+            <div id="main-menu" class="container">
+                <div class="navbar-header">
+
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu-items" style="float:right;">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+
+
+                    <!-- mobile version of bread crumbs -->
+
+                    <div id="bread-mobile-container1" class="container hidden-lg hidden-md hidden-sm visible-xs pull-right" style="padding-top: 4px;margin-right: -7px;">
+                        <div id="bread-mobile-div-table">
+
+                            <div id="bread-mobile-div-dropdown">
+
+                                <div class="dropdown">
+                                    <button type="button" class="btn dropdown-toggle" id="search-dropdown" data-toggle="dropdown" style="background-color:#60B3D8;padding:7px 12px;">
+                                        <span class="glyphicon glyphicon-search white"></span>
+                                    </button>
+
+
+                                    <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="search-dropdown" style="padding:10px;width: 223px;">
+                                        <li role="presentation">
+                                            <img src="img/phone.png" class="header-icon" style="width:20px;height:20px;float:left;" />
+                                            <span>1866 814 7378</span>
+                                            <img src="img/facebook-logo.png" style="width:20px;height:20px;" />
+                                            <img src="img/twitter.png" style="width:20px;height:20px;">
+                                            <form class="main-search">
+                                                <input type="text" name="search">
+                                            </form>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- end dropdown -->
+
+
+
+                        </div>
+                        <!-- end div table cell for dropdown -->
+                    </div>
+                    <!-- end div table row -->
+
+                    <!-- end mobile -->
+
+
+
+                    <a class="navbar-brand" href="#"><img src="img/andersons-vacation-logo.png" />
+                    </a>
+
+
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="main-menu-items">
+                    <!-- <ul class="nav navbar-nav pull-right sf-menu" id="all-menu">       -->
+                    <ul class="nav navbar-nav sf-menu" id="all-menu">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us <span class="caret"></span></a>
+
+
+                            <div class="header-nav-lists dropdown-menu" role="menu">
+
+
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Destinations <span class="caret"></span></a>
+
+
+                            <div class="header-nav-lists dropdown-menu" role="menu">
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ways to Travel <span class="caret"></span></a>
+
+                            <div class="header-nav-lists dropdown-menu hidden-lg hidden-md hidden-sm" role="menu">
+                                <p>Canada & Alaska</p>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <p>New Zealand</p>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <p>Australia</p>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <p>South Pacific Island</p>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+                            </div>
+
+
+                            <div class="dropdown-menu hidden-xs" role="menu" style="width:650px;margin-right:500px;margin-left:-144px;">
+
+                                <div class="ways-to-travel-submenu">
+                                    <p>Canada & Alaska</p>
+
+                                    <a href="">
+                                        <div>Day Touring and Sightseeing</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Day Tour</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+
+
+                                </div>
+
+                                <div class="ways-to-travel-submenu">
+                                    <p>New Zealand</p>
+
+
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                </div>
+
+                                <div class="ways-to-travel-submenu">
+                                    <p>Australia</p>
+
+
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                </div>
+
+                                <div class="ways-to-travel-submenu">
+                                    <p>South Pacific Island</p>
+
+
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                    <a href="">
+                                        <div>Link 1</div>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <!-- end drop down menu -->
+
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Media <span class="caret"></span></a>
+
+
+                            <div class="header-nav-lists dropdown-menu" role="menu">
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Agents <span class="caret"></span></a>
+
+
+                            <div class="header-nav-lists dropdown-menu" role="menu">
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact <span class="caret"></span></a>
+
+
+                            <div class="header-nav-lists dropdown-menu" role="menu">
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+                                <div><a href="">Link 1</a>
+                                </div>
+
+                            </div>
+
+                        </li>
+                    </ul>
+
+
+
+
+
+                </div>
+            </div>
+
+            <hr class="thin-blue">
+
+
+
+
+
+        </div>
+
+        <div id="menu-extras" class="hidden-xs">
+
+            <div class="container">
+                <div id="caption" class="hidden-xs">DESTINATION <span class="emphasis">EXPERTS</span> CREATING CUSTOMISED TRAVEL EXPERIENCES </div>
+
+                <div id="contact-search" class="pull-right">
+
+                    <img src="img/phone.png" class="header-icon" />
+                    <span>1866 814 7378</span>
+                    <img src="img/facebook-logo.png" class="header-icon" />
+                    <img src="img/twitter.png" class="header-icon ">
+                    <form class="main-search">
+                        <input type="text" name="search">
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        <!-- menu-extras -->
+
+
+
+    </nav>
+
+
+</header>
+
+
+	<!-- carousel content holder 
+    	====================================================== -->
+     	<div id="home-slideshow" style="position:fixed; top:108px;z-index:1;width:100%;">
+            <div id="carousel-example" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example" data-slide-to="1"></li>
+                    <li data-target="#carousel-example" data-slide-to="2"></li>
+                </ol>
+        
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div style="background:url(img/slideshow-image-template-1.jpg) center center; background-size:cover;" class="slider-size"></div> 
+                    </div>
+        
+                    <div class="item">
+                        <div style="background:url(img/slideshow-image-template-1.jpg) center center; background-size:cover;" class="slider-size"></div>
+                    </div>
+        
+                    <div class="item">
+                        <div style="background:url(img/slideshow-image-template-1.jpg) center center; background-size:cover;" class="slider-size"></div>
+                    </div>
+                </div>
+        
+                <!-- Controls -->
+        
+            </div>
+		</div>
+              
+   	<!-- page content 
+    	====================================================== -->
+        <div id="body-container" class="row" style="padding-bottom:35px; padding-top:30px;z-index:50;position:relative;background-color:#fff;">
+			
+            <!-- container for page for 1050px -->
+            <div id="pageContent-wrapper" class="container">
+            
+            	<div class="row" style="min-height:500px;">
+                
+                		<!-- Page Content 
+                        	============== -->
+                        <div class="col-lg-9">
+                        	
+                            <div class="row">
+                            
+                            	<!-- insert contents now -->
+                            	<div class="col-lg-11">
+                                	
+                                    <h2 style="margin:0;font-size:20px;margin-bottom:8px;">
+                                    <img style="vertical-align:sub;" src="img/globe.png">&nbsp;&nbsp;OUR DESTINATIONS</h2>
+                                    
+                                    <p style="margin-bottom:15px;">Where do you want to go? Celebrating more than 20 years in business we are recognised as a specialist travel provider, tailor making vacations throughout the destinations we have on offer:</p>
+                                    
+                                    <!-- insert destination list tpl -->
+                                    <div id="destination-row" class="row">
+                                    	<div class="col-lg-12">dsads</div>
+                                    </div>
+                                    
+                                    
+                                    <!-- WAYS TO TRAVEL SECTION -->
+                                    <h2 style="margin:2px 0px 0px 0px;font-size:20px;">
+                                    <img style="vertical-align:sub;" src="img/travel-with-us.png">&nbsp;&nbsp;WAYS TO TRAVEL</h2>
+                                    <p style="margin-bottom:30px;">How do you want to travel? Select from the list below the way that most defines how you want to travel with us or what you are looking for.</p>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                </div><!-- end contents -->
+                            </div><!-- end row -->
+                            
+                        </div><!-- close col lg-9 -->
+                            
+                            
+                            
+                        <!-- Side Bar 
+                        	============== -->
+                        <div class="col-lg-3">
+                        	sidebar content holder
+                        </div>
+                
+                
+                </div>
+                <!-- close main row containing content and side bar -->
+            
+            </div>
+            <!-- close pageContent wrapper -->
+       </div>
+       <!-- #end body - container -->
+      
+    <!-- footer content holder
+     	====================================================== --> 
+        <footer style="z-index:50;position:relative;">
+   
+
+    <!-- phone-info -->  
+    <div id="phone-info" >
+          <address class="container">
+           <div class="col-lg-12">
+               <p>Call one of our friendly travel experts to customize and plan your vacation today.</p>
+               
+               <p id="phone-number">Toll Free North America:<span>1.866.814.7378</span>  Overseas: <span>+1.403.245.6200</span></p> 
+               
+          </div>
+           <img src="img/cursor.png" class="pull-right" style="margin-right:42%;margin-top:-20px;"/>
+          </address>
+         
+    </div><!-- end phone-info -->
+    
+    
+    <div id="footer-padding">     
+    </div>
+    
+     <!-- #footer-links -->  
+     <div id="footer-links">
+        <div class="container">
+            <div id="footer-about" class="col-lg-1 box hidden-xs">
+            <h4>About</h4>
+              <nav>
+                <div><a href="">Link 1</a></div>
+                <div><a href="">Link 1</a></div>
+                <div><a href="">Link 1</a></div>
+                <div><a href="">Link 1</a></div>
+              </nav>            
+            </div> <!-- #end footer-about -->  
+            
+            <div id="footer-destinations" class="col-lg-1 box hidden-xs">
+            <h4>Destinations</h4>
+              <nav>
+                <div><a href="">Link 1</a></div>
+                <div><a href="">Link 1</a></div>
+                <div><a href="">Link 1</a></div>
+                <div><a href="">Link 1</a></div>
+              </nav>            
+            </div> <!-- #end footer-destinations -->        
+           
+            <div id="footer-services" class="col-lg-1 box hidden-xs">
+            <h4>Services</h4>
+              <nav>
+                <div><a href="">Link 1</a></div>
+                <div><a href="">Link 1</a></div>
+                <div><a href="">Link 1</a></div>
+                <div><a href="">Link 1</a></div>
+              </nav>            
+            </div> <!-- #end footer-services --> 
+            
+            <div id="footer-media" class="col-lg-1 box hidden-xs">
+            <h4>Media</h4>
+              <nav>
+                <div><a href="">Link 1</a></div>
+                <div><a href="">Link 1</a></div>
+                <div><a href="">Link 1</a></div>
+                <div><a href="">Link 1</a></div>
+              </nav>            
+            </div><!-- #endfooter-media --> 
+            
+            <div id="footer-agents" class="col-lg-1 box hidden-xs">
+            <h4>Agents</h4>
+              <nav>
+                <div><a href="">Link 1</a></div>
+                <div><a href="">Link 1</a></div>
+                <div><a href="">Link 1</a></div>
+                <div><a href="">Link 1</a></div>
+              </nav>            
+            </div><!-- #end footer-agents --> 
+            
+            <div id="footer-contact" class="col-lg-1 box">
+            <h4>Contact</h4>
+              <address>
+                <p>  301, 1117 1st Street SW | <br/>
+                    Calgary, AB | T2R0T9 <br/>
+                    Toll Free: <br/>
+                    1-866-814-7378 <br/>
+                    Local: 403-245-6200 <br/>
+                    Email: bookings@andersonvacations.ca
+               </p>
+              </address>            
+            </div><!-- #end footer-contact --> 
+            
+           
+        </div>    <!-- end container --> 
+           
+    </div>  <!-- end #footer-links --> 
+    
+    
+      
+          
+    <div class="row" id="copyright-info">
+         <div class="container">
+           <hr>
+           <div> 
+              <a href="#" class="pull-left"><img src="img/andersons-vacation-logo-white.png"/></a>              
+              <div class="pull-right"> 2014 Copyright Andersons Vacation</div>  
+                                   
+           </div>
+         </div>  
+      
+       
+    </div><!-- end #copyright-info --> 
+ <br>       
+</footer>
+         
+          
+      
+    <!-- jQuery Version 1.11.0 -->  
+    
+    <script src="js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    
+        
+    <script src="js/hover-effect-nav.js"></script>
+    
+
+</body>
+
+</html>

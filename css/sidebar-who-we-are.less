@@ -1,0 +1,61 @@
+/***** start:File: sidebar-who-we-are *********/
+@import "vars";
+@import "mixins";
+
+
+#sidebar-who-we-are {
+    .panel-group {
+        .panel {
+          border-radius: 0px;
+            .panel-heading {
+                background-color: @blue-dark; 
+                padding: 7px 15px;
+                .border-radius (0px); 
+
+                .panel-title {
+                    img{
+                        width: 5px;
+                        height: 11px;
+                      
+                        .transform(90deg);
+                    }
+                }
+            }
+            
+            #collapseOne{
+                .panel-body{
+                    font-size:13px;
+                    background-color: @blue-pale;
+                    font-family: Lucida Sans, Lucida Grande, Lucida Sans Unicode, sans-serif;
+                    line-height: 1.6;
+                }
+            }
+        }    
+    
+    }
+}
+
+.panel-title>a {
+       color:white;
+       text-transform:uppercase;
+       font-size: 13px;
+       margin-left:5px;
+       font-weight:bold;
+       line-height: 1.6;
+       font-size: 13px;
+       &link {
+           text-decoration: none;
+       }
+         &visited {
+           text-decoration: none;
+       }
+     &hover {
+           text-decoration: none;
+       }
+     &active {
+           text-decoration: none;
+       }
+      
+}
+
+/*****  end:File: sidebar-who-we-are  *********/

@@ -1,0 +1,49 @@
+.nav-tabs {
+  border-bottom: 0;  
+}
+.nav-tabs > li {
+  float: left;
+  margin-bottom: -1px;
+  background-color:transparent;
+  color: white;
+}
+.nav-tabs > li > a {
+     
+      line-height: 1.42857143;
+      border-radius: 4px 4px 0 0;
+      background-color:@blue-dark;    /*blue-dark*/  
+      -moz-border-radius: 20px 20px 0px 0px;
+      -webkit-border-radius: 20px 20px 0px 0px;
+      border: 0px solid #000000; 
+      text-align: center;
+      color: white;    
+      font-size: 11px;
+}
+.nav-tabs > li > a:hover {
+  border-color: 0;
+ background-color: @gray-light;   
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  
+  cursor: default;
+  background-color: @blue-light;
+  color:white;
+  
+}
+.nav-tabs.nav-justified {
+  width: 100%;
+  border-bottom: 0;
+}
+.nav-tabs.nav-justified > li {
+  float: none;
+}
+.nav-tabs.nav-justified > li > a {
+  margin-bottom: 0;
+  text-align: center;
+}
+.nav-tabs.nav-justified > .dropdown .dropdown-menu {
+  top: auto;
+  left: auto;
+}

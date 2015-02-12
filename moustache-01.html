@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Untitled page</title>
+        <meta name="description" content="" />
+    </head>
+    <body>
+   
+    <div>
+          <div class="itinerary-group">
+            <p class="itinerary-item">Name:<span class="description">SampleName</span>
+            Item Id: <span class="item-id">345345</span>
+            Price:  <span class="price">400</span>
+            Cost: <span class="cost">800</span></p>
+        <button class="add-item">Add Item</button>
+        </div>
+    </div>
+    
+    
+     <div>
+          <div class="itinerary-group">
+            <p class="itinerary-item">Name:<span class="description">asdfasd</span>
+            Item Id: <span class="item-id">345345</span>
+            Price:  <span class="price">400</span>
+            Cost: <span class="cost">800</span></p>
+        <button class="add-item">Add Item</button>
+        </div>
+    </div>
+    
+    
+     <div id="list-items">
+     <button class="done">Done!</button> 
+     </div>    
+        
+    <script id="my-template" type="text/template">
+  
+ 
+ 
+     <div class="item">
+     Qty: <input class="qty" type="text" value="1"></input>
+     Description:<input class="description"  value="{{description}}" type="text"></input>
+     itemId:<input class="itemId" value="{{itemId}}" type="text"></input>
+     price:<input class="price" value="{{price}}" type="text"></input>
+     cost:<input class="cost" value="{{cost}}" type="text"></input>
+     <button class="delete">Delete</button>
+    </script>
+        
+        
+    </body>
+     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js"></script>
+    
+   
+    <script>
+       
+        
+        $('.add-item').on('click', function(){
+               //get needed info
+               // var description, itemId, price, cost;
+               var group = $(this).parent().html();
+           
+               var product = {
+                    description : $(group).find('.description').text(),
+                    itemId : $(group).find('.item-id').text(),
+                    price : $(group).find('.price').text(),
+                    cost : $(group).find('.cost').text()
+                };
+            
+                var template = $('#my-template').html();
+                var html = Mustache.to_html(template, product);
+                 $('#list-items').prepend(html);
+              
+                
+                $('.item').find('.delete').on('click', function(){
+                     $(this).parent().remove();
+                });
+            
+        });
+        
+         $('.done').on('click', function(){
+            //loop through items, get info and pars
+             var itemList = [];
+             var totalPrice = 0;
+             var totalCost = 0;
+             $('#list-items').find('.item').each(function(){
+                var qty, description, itemId, price, cost;
+                var itemText = "";  
+                 qty = "qty(" + $(this).find('.qty').val() + ")";
+                
+                   description = "description(" + $(this).find('.description').val() + ")";
+                   itemId = "itemId(" + $(this).find('.itemId').val() + ")";
+                   price = "price("  + $(this).find('.price').val() + ")";
+                   cost = "cost(" + $(this).find('.cost').val() + ")";
+                   itemText = "["  + qty + "," + description + "," +itemId + "," + price + "]";
+                   itemList.push(itemText);    
+                 
+                   totalPrice += (parseInt($(this).find('.price').val()) * parseInt($(this).find('.qty').val()) );
+                   totalCost += (parseInt($(this).find('.cost').val()) * parseInt($(this).find('.qty').val()) );
+             
+             });
+             
+             alert(itemList.toString()  + "\ntotalPrice >>" + totalPrice + "\ntotalCost >>" + totalCost );
+         }); 
+    
+        
+        
+        
+    </script>
+</html>

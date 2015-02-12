@@ -1,0 +1,52 @@
+/***** start:File: sidebar-media-request *********/
+@import "vars";
+@import "mixins";
+
+
+.media-table-info {
+    td {
+        padding: 5px 0 5px 0;
+        img {
+            padding-right:10px;
+        }
+    }
+    tr td:first-child{
+        width: 5%;
+    }
+    line-height: 1.6;
+    font-size: 13px;
+    color: @gray-dark;
+    text-align: left;
+    font-family: Lucida Sans, Lucida Grande, Lucida Sans Unicode, sans-serif;
+    width: 100%;
+}
+
+
+.main-name-container {
+   height: 55px;
+}
+
+.media-photo {
+ width: 54px;
+ height: 55px;
+ border-style: none;
+ border-color: transparent;
+ background-color: @gray-light;
+ display:inline-block;
+ float:left;
+ margin-right:5px;
+ background-size: cover;	
+}
+
+.media-position {
+  display:inline-block;
+  height:55px;
+  float:left;
+  font-weight:bold;	
+}
+
+.media-position span{
+  font-weight:normal;
+}
+
+/***** end:File: sidebar-media-request *********/

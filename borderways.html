@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Border</title>
+
+	<style>
+    	.waytocapsule
+		{
+			max-width:677px;
+			height:183px;
+			box-sizing:border-box;
+			background-color: #E7E7E7;
+			-moz-border-radius: 10px;
+			-webkit-border-radius: 10px;
+			-khtml-border-radius: 10px;
+			border-radius: 10px;
+			border-left:25px;
+			border-right:25px;
+			border-color:#ADADAD;
+			border-style: solid;
+			border-top:none;
+			border-bottom:none;
+			padding:9px 20px 0px 20px;	
+		}
+		
+		.box
+		{
+			width:133px;
+			height:111px;
+			background-color:#333;	
+		}
+    </style>
+    
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.4.0/slick.css"/>
+
+
+</head>
+
+
+<body>
+
+	<div class="waytocapsule">
+    
+    	<div class="slicker">
+        	<div>
+                <div class="box" style="background:url(img/syd40s_ml-u47062-fr.jpg)"></div>
+                <p>Coach Touring</p>
+            </div>
+            
+            <div>
+            	<div class="box" style="background:url(img/shutterstock_118352728-u47064-fr.jpg)"></div>
+                <p>City Breaks</p>
+            </div>
+            
+            
+            <div>
+            	<div class="box" style="background:url(img/shutterstock_105842318_lr-u47079-fr.jpg)"></div>
+                <p>Custom Group Itineraries</p>
+            </div>
+            
+            
+            <div>
+            	<div class="box" style="background:url(img/lawless.jpg)"></div>
+                <p>Motorhomes</p>
+            </div>
+            
+            
+            <div>
+            	<div class="box" style="background:url(img/syd40s_ml-u47062-fr.jpg)"></div>
+            </div>
+            
+        </div>
+    
+    </div>
+
+
+<!-- scripts -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.4.0/slick.min.js"></script>
+<script>
+	
+	$(document).ready(function(e) {
+        
+		$('.slicker').slick({
+							  dots: false,
+							  infinite: true,
+							  speed: 300,
+							  slidesToShow: 4,
+							  slidesToScroll: 1,
+							  responsive: [
+								{
+								  breakpoint: 1024,
+								  settings: {
+									slidesToShow: 3,
+									slidesToScroll: 3,
+									infinite: true,
+									dots: false
+								  }
+								},
+								{
+								  breakpoint: 600,
+								  settings: {
+									slidesToShow: 2,
+									slidesToScroll: 2
+								  }
+								},
+								{
+								  breakpoint: 480,
+								  settings: {
+									slidesToShow: 1,
+									slidesToScroll: 1
+								  }
+								}
+								// You can unslick at a given breakpoint now by adding:
+								// settings: "unslick"
+								// instead of a settings object
+							  ]
+});
+		
+    });
+
+</script>
+</body>
+</html>

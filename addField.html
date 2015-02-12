@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Untitled page</title>
+        <meta name="description" content="" />
+    </head>
+    <body>
+    
+    <script type="mustach/x-tmpl" id="sample">
+      <h1>{{title}}</h1>  
+    </script>
+    <p>ADD FIELD</p>
+      <form action="demo_form.asp">
+      Code: <input type="text" name="fname"><br>
+
+      <input type="submit" value="Submit">
+      </form>
+      
+      <p>
+          Item Name:<span class="description">Description 1            
+          </span>
+          Price:<span class="price">100
+          </span>
+          Cost:<span class="cost">800
+          </span>
+         
+      </p>
+      <div class="list-group-temp">
+          <div class="list-item-temp">
+             Qty:  <input type="text" name="quantity" value="0" size="3">
+             Description:  <input type="text" name="quantity" value="" size="35">
+             Price:  <input type="text" name="quantity" value="" size="5">
+             Cost:  <input type="text" name="quantity" value="" size="5">
+             <input type="submit" value="edit">
+             <input type="submit" value="delete">
+          </div>
+          
+          
+      </div>
+    </body>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script scr="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js"></script>
+    <script>
+      var data = {title: "Buenas Dias!"}
+      var tmpl = $('#sample');
+      var html = Mustache.to_html(tmpl, data)
+     
+    </script>
+</html>
